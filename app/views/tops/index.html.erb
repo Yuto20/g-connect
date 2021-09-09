@@ -8,7 +8,7 @@
         <%= link_to 'ユーザーを検索する', '#', class: "user-search" %>
         <div class="greeting">
           ようこそ、
-          <%= link_to "#{current_user.nickname}さん", '#', class: "user-nickname" %>
+          <%= link_to "#{current_user.nickname}さん", "/users/#{current_user.id}", class: "user-nickname" %>
         </div>
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
       <% else %>
