@@ -18,8 +18,6 @@ class User < ApplicationRecord
   end
 
   with_options numericality: { other_than: 1, message: "can't be blank" } do
-      validates :age_id
-      validates :sex_id
       validates :voice_id
   end
 
