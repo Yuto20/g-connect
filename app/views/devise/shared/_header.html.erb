@@ -1,0 +1,10 @@
+<div class="btn-wrapper">
+  <% if user_signed_in? %>
+    <%= link_to 'ユーザーを検索する', users_path, class: "user-search" %>
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+    <%= link_to "#{current_user.nickname}さん", "/users/#{current_user.id}", class: "user-nickname" %>
+  <% else %>
+    <%= link_to 'ログイン', new_user_session_path, class: "login" %>
+    <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+  <% end %>
+</div>

@@ -1,20 +1,9 @@
+<%= render "devise/shared/header" %>
+
 <div class="top-wrapper">
   <div class="container">
     <h1>ゲーム仲間を探そう！</h1>
     <p>G-connectでは一緒にゲームする仲間を探すことができます。</p>
     <p>朝・昼・夜好きな時間にゲームを誘うことができます。今すぐユーザーを検索してコンタクトを取ってみましょう！</p>
-    <div class="btn-wrapper">
-      <% if user_signed_in? %>
-        <%= link_to 'ユーザーを検索する', '#', class: "user-search" %>
-        <div class="greeting">
-          ようこそ、
-          <%= link_to "#{current_user.nickname}さん", "/users/#{current_user.id}", class: "user-nickname" %>
-        </div>
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
-      <% else %>
-        <%= link_to 'ログイン', new_user_session_path, class: "login" %>
-        <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
-      <% end %>
-    </div>
   </div>
 </div>
