@@ -12,13 +12,15 @@ class User < ApplicationRecord
   belongs_to :voice
 
   with_options presence: true do
+    validates :image
     validates :nickname, length: { maximum: 10 }
-    validates :voice_id
     validates :profile
+    with_options numericality: { other_than: 1, message: "can't be blank" } do
+      validates :age_id
+      validates :sex_id
+      validates :voice_id
+    end
   end
 
-  with_options numericality: { other_than: 1, message: "can't be blank" } do
-      validates :voice_id
-  end
 
 end

@@ -56,6 +56,26 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
       end
+      it 'ageが未選択だと登録できない' do
+        @user.age_id = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Age can't be blank")
+      end
+      it 'ageで1が選択された場合は保存できない' do
+        @user.age_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Age can't be blank")
+      end
+      it 'sexが未選択だと登録できない' do
+        @user.sex_id = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Sex can't be blank")
+      end
+      it 'sexで1が選択された場合は保存できない' do
+        @user.sex_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Sex can't be blank")
+      end
       it 'voiceが未選択だと登録できない' do
         @user.voice_id = ''
         @user.valid?
