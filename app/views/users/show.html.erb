@@ -32,7 +32,7 @@
       </table>
       <div class="btn">
         <% if user_signed_in? && current_user.id == @user.id %>
-          <%= link_to "ユーザー情報を編集する", '#', class:"user-btn" %>
+          <%= link_to "ユーザー情報を編集する", edit_user_path(@user.id), class:"user-btn" %>
         <% else %>
           <%= link_to "メッセージを送る", '#', class:"message-btn" %>
           <div>
