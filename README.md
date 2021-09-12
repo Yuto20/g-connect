@@ -28,10 +28,10 @@
 
 ## gamesテーブル（ゲーム情報）
 
-| Column      | Type    | Option      |
-| ----------- | ------- | ----------- |
-| platform_id | integer | null: false |
-| favorite    | string  | null: false |
+| Column   | Type   | Option      |
+| -------- | ------ | ----------- |
+| platform | string | null: false |
+| ancestry | string |             |
 
 ### Association
 
