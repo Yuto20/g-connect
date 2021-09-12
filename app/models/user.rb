@@ -3,7 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
+  
+  has_many :plays, dependent: :destroy
+  has_many :games, through: :plays
   has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions
@@ -21,6 +23,7 @@ class User < ApplicationRecord
       validates :voice_id
     end
   end
+  validates_associated :games
 
 
 end
