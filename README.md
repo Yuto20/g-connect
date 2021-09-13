@@ -14,8 +14,6 @@
 
 ### Association
 
-- has_many :games, through: :plays
-- has_many :plays
 - has_many :rooms, through: :entries
 - has_many :entries, dependent: :destroy
 - has_many :messages, dependent: :destroy
@@ -26,29 +24,6 @@
 - has_many :active_notifications, class_name: 'Notification', foreign_key: visitor_id, dependent: :destroy
 - has_many :passive_notifications, class_name: 'Notification', foreign_key: visited_id, dependent: :destroy
 
-## gamesテーブル（ゲーム情報）
-
-| Column   | Type   | Option      |
-| -------- | ------ | ----------- |
-| platform | string | null: false |
-| ancestry | string |             |
-
-### Association
-
-has_many :plays, dependent: :destroy
-has_many :users, through: :plays
-
-## playsテーブル（usersテーブルとgamesテーブルの中間テーブル）
-
-| Column  | Type    | Option                         |
-| ------- | ------- | ------------------------------ |
-| user_id | integer | null: false, foreign_key: true |
-| game_id | integer | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- belongs_to :game
 
 ## roomsテーブル（チャットルーム情報）
 
