@@ -86,6 +86,26 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Voice can't be blank")
       end
+      it 'platformが未選択だと登録できない' do
+        @user.platform_id = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Platform can't be blank")
+      end
+      it 'platformで1が選択された場合は保存できない' do
+        @user.platform_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Platform can't be blank")
+      end
+      it 'favoriteが未選択だと登録できない' do
+        @user.favorite_id = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Favorite can't be blank")
+      end
+      it 'favoriteで1が選択された場合は保存できない' do
+        @user.favorite_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Favorite can't be blank")
+      end
       it 'profileが空だと登録できない' do
         @user.profile = ''
         @user.valid?

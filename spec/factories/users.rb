@@ -7,6 +7,8 @@ FactoryBot.define do
     age_id                { 2 }
     sex_id                { 2 }
     voice_id              { 2 }
+    platform_id           { 2 }
+    favorite_id           { 7 }
     profile               { Faker::Lorem.sentence }
 
     after(:build) do |user|
