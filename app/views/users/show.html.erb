@@ -25,6 +25,14 @@
             <td class="table__col2"><%= @user.voice.name %></td>
           </tr>
           <tr>
+            <th class="table__col1">使用プラットフォーム</th>
+            <td class="table__col2"><%= @user.platform.name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">よくプレイするゲーム</th>
+            <td class="table__col2"><%= @user.favorite.name %></td>
+          </tr>
+          <tr>
             <th class="table__col1">プロフィール</th>
             <td class="table__col2"><%= @user.profile %></td>
           </tr>
