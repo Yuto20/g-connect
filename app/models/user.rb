@@ -10,6 +10,8 @@ class User < ApplicationRecord
   belongs_to :age
   belongs_to :sex
   belongs_to :voice
+  belongs_to :platform
+  belongs_to :favorite
 
   with_options presence: true do
     validates :image
@@ -19,6 +21,8 @@ class User < ApplicationRecord
       validates :age_id
       validates :sex_id
       validates :voice_id
+      validates :platform_id
+      validates :favorite_id
     end
   end
 end
