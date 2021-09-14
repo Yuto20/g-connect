@@ -2,21 +2,21 @@
 
 <% @users.each do |user| %>
   <li class='list'>
-        <%= link_to user_path(user.id), method: :get do %>
-        <div class='user-img-content'>
-          <%= image_tag user.image, class: "user-img" %>
+    <%= link_to user_path(user.id), method: :get do %>
+      <div class='user-img-content'>
+        <%= image_tag user.image, class: "user-img" %>
+      </div>
+      <div class='user-info'>
+        <h3 class='user-name'>
+          <%= user.nickname %>
+        </h3>
+        <div class='user-platform'>
+          <%= user.platform.name %>
         </div>
-        <div class='user-info'>
-          <h3 class='user-name'>
-            <%= user.nickname %>
-          </h3>
-          <div class='user-platform'>
-            <span><%= 'プラットフォーム' %></span>
-          </div>
-          <div class='user-favorite'>
-            <span><%= 'よくプレイするゲーム' %></span>
-          </div>
+        <div class='user-favorite'>
+          <%= user.favorite.name %>
         </div>
-        <% end %>
-      </li>
+      </div>
+    <% end %>
+  </li>
 <% end %>

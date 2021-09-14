@@ -22,3 +22,7 @@
 .form-group-favorite {
   display:none;
 }
+
+.list {
+  list-style: none;
+}
