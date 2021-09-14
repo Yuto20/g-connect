@@ -1,5 +1,28 @@
 <%= render "devise/shared/header" %>
 
+<div class="search-data">
+  <%= search_form_for @u, url: users_search_path do |f| %>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label for="user-platform", class="form-text">プラットフォーム</label>
+      </div>
+      <%= f.collection_select(:platform_id_eq, Platform.all, :id, :name, {}, {class:"select-box", id:"user-platform"}) %>
+    </div>
+
+    <div id="form-group-favorite" class="form-group-favorite">
+      <div id="favorite_box">
+      <label class="item_input__body__label" id="size_box">
+        ゲーム名
+      </label>
+      </div>
+      <div class="pulldown" id="favorite_selectbox">
+        <%= f.collection_select(:favorite_id_eq, Favorite.all, :id, :name, {}, {class:"favorite_box"}) %>
+      </div>
+    </div>
+    <%= f.submit %>
+  <% end %>
+</div>
+
 <% @users.each do |user| %>
   <li class='list'>
     <%= link_to user_path(user.id), method: :get do %>

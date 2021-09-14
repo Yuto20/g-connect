@@ -1,0 +1,25 @@
+<h1>検索結果</h1>
+<% if @results.length !=0 %>
+  <% @results.each do |result| %>
+  <li class='list'>
+      <div class='user-img-content'>
+        <%= image_tag result.image, class: "user-img" %>
+      </div>
+      <div class='user-info'>
+        <h3 class='user-name'>
+          <%= result.nickname %>
+        </h3>
+        <div class='user-platform'>
+          <%= result.platform.name %>
+        </div>
+        <div class='user-favorite'>
+          <%= result.favorite.name %>
+        </div>
+      </div>
+  </li>
+  <% end %>
+<% else %>
+  該当するユーザーはいません
+<% end %>
+<br>
+<%= link_to "ユーザー一覧ページへ戻る", users_path, class: "user-index-btn" %>

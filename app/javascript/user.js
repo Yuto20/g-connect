@@ -1,6 +1,6 @@
 $(document).on('change', '#user-platform', function() {
   let platformId = $('#user-platform').val();
-  //カテゴリーが初期値でない場合
+  //カテゴリー（プラットフォーム）が初期値でない場合
   if (platformId != '--') {
     $('.form-group-favorite').val('');
     $('.form-group-favorite option').css('display', 'block');

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :search_user, only: [:index, :search]
   def index
     query = "SELECT * FROM users"
     @users = User.find_by_sql(query)
@@ -21,9 +22,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def search
+    @results = @u.result
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:image, :nickname, :age_id, :sex_id, :voice_id, :platform_id, :favorite_id, :profile)
+  end
+
+  def search_user
+    @u = User.ransack(params[:q])
   end
 end
