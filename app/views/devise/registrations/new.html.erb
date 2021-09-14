@@ -55,6 +55,7 @@
     <div class="form-group">
       <div class='form-text-wrap'>
         <label for="user-age", class="form-text">年齢</label>
+        <span class="indispensable">必須</span>
       </div>
       <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"user-age"}) %>
     </div>
@@ -62,6 +63,7 @@
     <div class="form-group">
       <div class='form-text-wrap'>
         <label for="user-sex", class="form-text">性別</label>
+        <span class="indispensable">必須</span>
       </div>
       <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-box", id:"user-sex"}) %>
     </div>
@@ -69,8 +71,29 @@
     <div class="form-group">
       <div class='form-text-wrap'>
         <label for="user-voice", class="form-text">ボイスチャット</label>
+        <span class="indispensable">必須</span>
       </div>
       <%= f.collection_select(:voice_id, Voice.all, :id, :name, {}, {class:"select-box", id:"user-voice"}) %>
+    </div>
+
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label for="user-platform", class="form-text">使用プラットフォーム</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.collection_select(:platform_id, Platform.all, :id, :name, {}, {class:"select-box", id:"user-platform"}) %>
+    </div>
+
+    <div class="form-group-favorite">
+      <div id="favorite_box">
+      <label class="item_input__body__label" id="size_box">
+        プレイするゲーム
+        <span class="required">必須</span>
+      </label>
+      </div>
+      <div class="pulldown" id="favorite_selectbox">
+        <%= f.collection_select(:favorite_id, Favorite.all, :id, :name, {}, {class:"favorite_box"}) %>
+      </div>
     </div>
 
     <div class="form-group">
