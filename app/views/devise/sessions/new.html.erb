@@ -4,6 +4,8 @@
 
   <%= form_with model: @user, url: user_session_path, method: "post", class: 'session-main', local: true do |f| %>
 
+  <%= render 'devise/shared/error_messages', model: f.object %>
+
     <div class="form-group">
       <div class='form-text-wrap'>
         <label for="email" class="form-text">メールアドレス</label>
