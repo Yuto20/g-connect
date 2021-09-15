@@ -26,6 +26,16 @@ class UsersController < ApplicationController
     favorite_id = params[:q][:favorite_id_eq]
     @favorite = Favorite.find_by(id: favorite_id)
   end
+  
+  def followings
+    user = User.find(params[:id])
+    @users = user.followings
+  end
+
+  def followers
+    user = User.find(params[:id])
+    @users = user.followers
+  end
 
   private
 
