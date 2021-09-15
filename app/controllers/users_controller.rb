@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
   before_action :search_user, only: [:index, :search]
   before_action :set_user, only: [:show, :edit, :update]
   def index
@@ -20,7 +21,10 @@ class UsersController < ApplicationController
   end
 
   def search
-    @results = @u.result
+    @users = @u.result
+    platform_id = params[:q][:platform_id_eq]
+    favorite_id = params[:q][:favorite_id_eq]
+    @favorite = Favorite.find_by(id: favorite_id)
   end
 
   private
@@ -36,4 +40,5 @@ class UsersController < ApplicationController
   def search_user
     @u = User.ransack(params[:q])
   end
+  
 end

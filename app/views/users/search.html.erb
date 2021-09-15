@@ -1,21 +1,23 @@
 <h1>検索結果</h1>
-<% if @results.length !=0 %>
-  <% @results.each do |result| %>
+<% if @users.length !=0 %>
+  <% @users.each do |user| %>
   <li class='list'>
+    <%= link_to user_path(user.id), method: :get do %>
       <div class='user-img-content'>
-        <%= image_tag result.image, class: "user-img" %>
+        <%= image_tag user.image, class: "user-img" %>
       </div>
       <div class='user-info'>
         <h3 class='user-name'>
-          <%= result.nickname %>
+          <%= user.nickname %>
         </h3>
         <div class='user-platform'>
-          <%= result.platform.name %>
+          <%= user.platform.name %>
         </div>
         <div class='user-favorite'>
-          <%= result.favorite.name %>
+          <%= user.favorite.name %>
         </div>
       </div>
+    <% end %>
   </li>
   <% end %>
 <% else %>
