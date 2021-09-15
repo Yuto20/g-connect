@@ -30,4 +30,8 @@ class User < ApplicationRecord
       validates :favorite_id
     end
   end
+
+  def is_followed_by?(user)
+    reverse_of_relationships.find_by(following_id: user.id).present?
+  end
 end
