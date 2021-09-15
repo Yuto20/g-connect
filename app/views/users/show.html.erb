@@ -9,11 +9,16 @@
       <table class="table">
         <tbody>
           <tr>
-            <th class="table__col1">ニックネーム</th>
-            <td class="table__col2"><%= @user.nickname %></td>
+            <td class="table__col1"><%= image_tag @user.image, class: "user-img" %></td>
+          </tr>
+          <p class="text-small">
+            <%= link_to @user.followings.count, followings_user_path(@user) %> フォロー
+            <%= link_to @user.followers.count, followers_user_path(@user) %> フォロワー
+          </p>
+          <tr>
+            <td class="table__col1"><%= @user.nickname %></td>
           </tr>
           <tr>
-            <th class="table__col1">年齢</th>
             <td class="table__col2"><%= @user.age.name %></td>
           </tr>
           <tr>
