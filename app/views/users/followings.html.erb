@@ -5,8 +5,10 @@
       <table class="table text-center">
         <thead>
           <tr>
-            <th>Name</th>
-            <th></th>
+            <th>ニックネーム</th>
+            <th>プラットフォーム</th>
+            <th>よくプレイするゲーム</th>
+            <th>フォロー状況</th>
           </tr>
         </thead>
         <tbody>
@@ -14,8 +16,15 @@
             <tr>
               <td>
                 <%= link_to user_path(user) do %>
+                  <%= image_tag user.image, width: '10%', height: '10%' %>
                   <%= user.nickname %>
                 <% end %>
+              </td>
+              <td>
+                  <%= user.platform.name %>
+              </td>
+              <td>
+                  <%= user.favorite.name %>
               </td>
               <td>
                 <% if user != current_user %>
