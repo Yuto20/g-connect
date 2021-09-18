@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     get :followings, on: :member
     get :followers, on: :member
   end
-  resources :rooms
+  get 'chat/:id' => 'chats#show', as: 'chat'
+  resources :chats, only: [:create]
 end
