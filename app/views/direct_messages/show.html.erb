@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <h2 id="room" data-room="<%= @room.id %>" data-user="<%= current_user.id %>"><%= @user.nickname %> さんとのチャット</h2>
+
+            <table class="message table">
+              <thead>
+                <tr>
+                  <th style="text-align: left; font-size: 20px;"><%= current_user.nickname %></th>
+                  <th style="text-align: right; font-size: 20px;"><%= @user.nickname %></th>
+                </tr>
+              </thead>
+              <% @direct_messages.each do |dm| %>
+                <% if dm.user_id == current_user.id %>
+                <tbody>
+                  <tr>
+                    <th>
+                      <p style="text-align: left;"><%= dm.content %></p>
+                    </th>
+                    <th></th>
+                  </tr>
+                </tbody>
+                <% else %>
+                <tbody>
+                  <tr>
+                    <th></th>
+                    <th>
+                      <p style="text-align: right;"><%= dm.content %></p>
+                    </th>
+                  </tr>
+                </tbody>
+                <% end %>
+              <% end %>
+            </table>
+
+            <%= form_with model: @direct_message do |f| %>
+              <%= f.text_field :content %>
+              <%= f.submit '送信', class: 'form-submit' %>
+              <%= f.hidden_field :room_id %>
+            <% end %>
+        </div>
+    </div>
+</div>

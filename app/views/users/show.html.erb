@@ -48,21 +48,7 @@
           <%= link_to "ユーザー情報を編集する", edit_user_path(@user.id), class:"user-btn" %>
 
         <% else %>
-          <!-- 既にroomが存在していれば既存のroomへ -->
-          <% if @isRoom == true %>
-            <!-- メールアイコンでroomに飛べるようにする -->
-            <%= link_to room_path(@roomId) do %>
-              <button id="dm_submit"><i class="fas fa-envelope"></i></button>
-            <% end %>
-          <% else %>
-            <!-- roomが存在していなければroomを作成する  -->
-            <%= form_for @room, url: rooms_path do |f| %>
-              <%= fields_for @entry do |e| %>
-                <%= e.hidden_field :user_id, :value=> @user.id %>
-              <% end %>
-              <button type="submit" id="dm_submit"><i class="fas fa-envelope"></i></button>
-            <% end %>
-          <% end %>
+          <%= link_to 'チャットする', direct_message_path(@user.id) %>
           <div>
           <% if @user.is_followed_by?(current_user) %>
             <%= link_to user_relationships_path(@user), method: :delete do %>
