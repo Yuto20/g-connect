@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     get :followings, on: :member
     get :followers, on: :member
   end
+  resources :rooms
 end
