@@ -12,13 +12,15 @@ class DirectMessagesController < ApplicationController
     else
       @room = entries.room
     end
-    @direct_messages = @room.direct_messages
-    @direct_message = DirectMessage.new(room_id: @room.id)
+    @direct_messages = @room.direct_messages.order(created_at: :desc)
+    @direct_message = DirectMessage.new(user_id: @user.id, room_id: @room.id)
   end
 
   def create
     @direct_message = current_user.direct_messages.new(direct_message_params)
-    @direct_message.save
+    if @direct_message.save
+      ActionCable.server.broadcast 'direct_message_channel',{content: @direct_message, created_at: @direct_message.created_at, nickname: @direct_message.user.nickname}
+    end
   end
 
   private
