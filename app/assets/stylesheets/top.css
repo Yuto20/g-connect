@@ -1,0 +1,160 @@
+.top-wrapper {
+  background-image: url('play.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.discription {
+  color: black;
+  text-shadow: 0 0.05em 0.08em white;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  padding: 20px;
+}
+
+p {
+  font-size: 24px;
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+.top-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sign-up-btn {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 20px;
+  background-color: teal;
+  margin: 20px;
+  opacity: 0.8;
+  border-radius: 3%;
+}
+
+.sign-up-btn:hover {
+  opacity: 1.0;
+}
+
+.user-search-btn {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 20px;
+  background-color: orange;
+  margin: 20px;
+  opacity: 0.8;
+  border-radius: 3%;
+}
+
+.user-search-btn:hover {
+  opacity: 1.0;
+}
+
+.genre-container {
+  height: 700px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 30px;
+  text-shadow: 0 0.05em 0.08em white;
+}
+
+.genre-images {
+  display: flex;
+  flex-direction: column;
+}
+
+.genre-images-top {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px;
+}
+
+.genre-images-bottom {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px;
+}
+
+.game-logo1 {
+  height: 200px;
+  width: 250px;
+}
+.game-logo2 {
+  height: 200px;
+  width: 250px;
+}
+.game-logo3 {
+  height: 200px;
+  width: 250px;
+}
+.game-logo4 {
+  height: 200px;
+  width: 250px;
+}
+.game-logo5 {
+  height: 200px;
+  width: 250px;
+}
+.game-logo6 {
+  height: 200px;
+  width: 250px;
+}
+.game-logo7 {
+  height: 200px;
+  width: 250px;
+}
+.game-logo8 {
+  height: 200px;
+  width: 250px;
+}
+
+.message-wrapper {
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: paleturquoise;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.message-1 {
+  width: 40%;
+  padding-top: 20px;
+  text-shadow: 0 0.05em 0.08em white;
+}
+
+.message-2 {
+  width: 40%;
+  padding-top: 20px;
+  text-shadow: 0 0.05em 0.08em white;
+}
+
+h3 {
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+
+h4 {
+  text-align: center;
+  padding: 20px;
+  font-size: 22px;
+}
+
+.btm-btn {
+  text-align: center;
+  margin: 20px 35%;
+}

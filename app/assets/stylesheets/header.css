@@ -1,0 +1,51 @@
+.btn-wrapper {
+  background-color: #eeeeee;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-icon {
+  width: 105px;
+  height: 105px;
+  margin-left: 48px;
+}
+
+.header-right {
+  margin-right: 10%;
+}
+
+.fas {
+  padding-right: 10px;
+}
+
+.user-search {
+  text-decoration: none;
+  color: #333333;
+  padding-right: 10px;
+}
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+  padding-right: 10px;
+}
+
+.user-nickname {
+  text-decoration: none;
+  color: #333333;
+  padding-right: 10px;
+}
+
+.login {
+  text-decoration: none;
+  color: #333333;
+  padding-right: 10px;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+  padding-right: 10px;
+}
