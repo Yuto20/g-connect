@@ -1,10 +1,15 @@
 <div class="btn-wrapper">
+  <div class="header-logo">
+    <%= link_to image_tag("logo.png", class:"logo-icon"), "/" %>
+  </div>
+  <div class="header-right">
   <% if user_signed_in? %>
-    <%= link_to 'ユーザーを検索する', users_path, class: "user-search" %>
-    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
-    <%= link_to "#{current_user.nickname}さん", "/users/#{current_user.id}", class: "user-nickname" %>
+    <i class="fas fa-search"></i><%= link_to 'ユーザー検索', users_path, class: "user-search" %>
+    <i class="fas fa-sign-out-alt"></i><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+    <i class="fas fa-user-circle"></i><%= link_to "マイページ", "/users/#{current_user.id}", class: "user-nickname" %>
   <% else %>
-    <%= link_to 'ログイン', new_user_session_path, class: "login" %>
-    <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+    <i class="fas fa-sign-in-alt"></i><%= link_to 'ログイン', new_user_session_path, class: "login" %>
+    <i class="fas fa-user-plus"></i><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
   <% end %>
+  </div>
 </div>

@@ -1,9 +1,48 @@
 <%= render "devise/shared/header" %>
 
 <div class="top-wrapper">
-  <div class="container">
+  <div class="discription">
     <h1>ゲーム仲間を探そう！</h1>
-    <p>G-connectでは一緒にゲームする仲間を探すことができます。</p>
-    <p>朝・昼・夜好きな時間にゲームを誘うことができます。今すぐユーザーを検索してコンタクトを取ってみましょう！</p>
+    <p>G-connectでは一緒にゲームする仲間を探すことができます。<br>
+    朝・昼・夜好きな時間にゲームを誘うことができます。今すぐユーザーを検索してコンタクトを取ってみましょう！</p>
   </div>
+  <div class="top-btn">
+    <%= link_to '新規登録はこちら', new_user_registration_path, class: "sign-up-btn" %>
+    <%= link_to 'ユーザー検索はこちら', users_path, class: "user-search-btn" %>
+  </div>
+</div>
+<div class="genre-wrapper">
+  <div class="genre-container">
+    <h2>ゲームジャンルの例</h2>
+    <div class="genre-images">
+      <div class="genre-images-top">
+        <%= image_tag 'game-logo1.png', class: "game-logo1" %>
+        <%= image_tag 'game-logo2.jpg', class: "game-logo2" %>
+        <%= image_tag 'game-logo3.png', class: "game-logo3" %>
+        <%= image_tag 'game-logo4.jpg', class: "game-logo4" %>
+      </div>
+      <div class="genre-images-bottom">
+        <%= image_tag 'game-logo5.jpg', class: "game-logo5" %>
+        <%= image_tag 'game-logo6.jpg', class: "game-logo6" %>
+        <%= image_tag 'game-logo7.jpg', class: "game-logo7" %>
+        <%= image_tag 'game-logo8.jpg', class: "game-logo8" %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="message-wrapper">
+  <div class="message-1">
+    <h3>増加し続けるゲーマー人口<h3>
+    <p>全世界において、ゲーム市場が爆発的な成長を遂げ、ゲームをプレイする人口が増加の一途を辿っています。2020年にはゲームプレイヤー人口が27億人超えたというデータも示されており、さらに2023年までに30億人を超えるという予測もされています。</p>
+  </div>
+  <div class="message-2">
+    <h3>日本でも大きな盛り上がり</h3>
+    <p>日本においても昨今のコロナウイルスの流行により外出機会が減っているため、ゲームを始める人がたくさん出始めました。2020年には5000万人を超え、現在もゲーム人口が増え続けています。</p>
+  </div>
+</div>
+<div class="bottom-wrapper">
+  <div class="bottom-message">
+    <h4>3人に1人がゲームをする時代、あなたも一緒にゲームをする仲間を見つけませんか？</h4>
+  </div>
+  <%= link_to '新規登録はこちら', new_user_registration_path, class: "btm-btn sign-up-btn" %>
 </div>
