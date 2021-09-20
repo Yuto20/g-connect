@@ -19,7 +19,7 @@ class DirectMessagesController < ApplicationController
   def create
     @direct_message = current_user.direct_messages.new(direct_message_params)
     if @direct_message.save
-      ActionCable.server.broadcast 'direct_message_channel',{content: @direct_message, created_at: @direct_message.created_at, nickname: @direct_message.user.nickname}
+      ActionCable.server.broadcast 'direct_message_channel',{content: @direct_message, nickname: @direct_message.user.nickname}
     end
   end
 

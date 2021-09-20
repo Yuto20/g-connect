@@ -10,8 +10,7 @@ consumer.subscriptions.create("DirectMessageChannel", {
   },
 
   received(data) {
-    const html = `<p>${data.nickname} : ${data.content.content}</p>
-                  <p>${data.created_at}</p>`;
+    const html = `<p>${data.nickname} : ${data.content.content}</p>`;
     const directMessages = document.getElementById('messages');
     const newDirectMessage = document.getElementById('message');
     directMessages.insertAdjacentHTML('afterbegin', html);
