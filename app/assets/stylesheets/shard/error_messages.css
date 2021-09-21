@@ -1,0 +1,8 @@
+.error-alert {
+  text-align: left;
+}
+
+.error-message {
+  color: red;
+  padding-bottom: 10px;
+}
