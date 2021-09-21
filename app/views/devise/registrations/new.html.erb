@@ -1,7 +1,10 @@
 <div class="contents_row">  
   
   <div class="container">
-    <h2>サインアップ</h2>
+    <div class="login-title">
+      <h2>サインアップ</h2>
+    </div>
+    <div class="form-contents">
     <%= form_with model: @user, url: user_registration_path, method: "post", class: 'registration-main', local: true do |f| %>
       
     <%= render 'devise/shared/error_messages', model: f.object %>
@@ -12,9 +15,9 @@
         <span class="indispensable">必須</span>
       </div>
       <div class="click-upload">
-        <p>
+        <span class="form-info">
           クリックしてファイルをアップロード
-        </p>
+        </span>
         <%= f.file_field :image, id:"item-image" %>
       </div>
     </div>
@@ -41,7 +44,9 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.password_field :password, class:"input-default", id:"password", placeholder:"6文字以上の半角英数字" %>
-      <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
+      <span class='form-info'>
+        ※英字と数字の両方を含めて設定してください
+      </span>
     </div>
 
     <div class="form-group">
@@ -103,9 +108,10 @@
       </div>
       <%= f.text_area :profile, class:"input-default", id:"profile", placeholder:"他のユーザーにひとこと！" %>
     </div>
+    </div>
 
       <div class="actions">
-        <%= f.submit "Sign up" %>
+        <%= f.submit "Sign up", class: "submit-btn" %>
       </div>
     <% end %>
   </div>

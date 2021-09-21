@@ -23,6 +23,7 @@ p {
   font-size: 24px;
   text-align: left;
   padding-bottom: 30px;
+  color: black;
 }
 
 .top-btn {
@@ -145,7 +146,8 @@ h2 {
 
 h3 {
   font-size: 28px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  color: black;
 }
 
 h4 {

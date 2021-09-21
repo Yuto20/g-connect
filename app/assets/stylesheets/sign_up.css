@@ -1,0 +1,93 @@
+.contents_row {
+  background-image: url('login-back1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1800px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  height: 1600px;
+  width: 60%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.login-title {
+  margin: 20px;
+  border-bottom: 3px solid lightblue;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.form-contents {
+  height: 1600px;
+  margin: 20px;
+}
+
+.indispensable {
+  display: inline-block;
+  background-color: lightskyblue;
+  color: white;
+}
+
+.form-info {
+  font-size: 14px;
+  color: gray;
+}
+
+.img-upload {
+  margin: 20px;
+  font-size: 20px;
+}
+
+#item-image {
+  font-size: 16px;
+}
+
+.form-group {
+  padding: 20px;
+}
+
+.form-text {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.input-default {
+  width: 70%;
+}
+
+.actions {
+  margin: 0 auto 20px;
+}
+
+.submit-btn {
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 18pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 12px;
+  background: #000066;
+  color: #ffffff;
+  line-height: 1em;
+  transition: .3s;
+  box-shadow: 6px 6px 3px #666666;
+  border: 2px solid #000066;
+}
+
+.submit-btn:hover {
+  box-shadow: none;
+  color: #000066;
+  background: #ffffff;
+}
+
+span {
+  display: inline-block;
+}

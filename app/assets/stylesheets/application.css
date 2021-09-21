@@ -14,15 +14,7 @@
  *= require_self
  */
 
- .user-img {
-  width: 80px;
-  height: 80px;
-}
-
-.form-group-favorite {
-  display:none;
-}
-
-.list {
-  list-style: none;
+a {
+  text-decoration: none;
+  color: black;
 }

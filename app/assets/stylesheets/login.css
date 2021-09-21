@@ -1,0 +1,54 @@
+.login-contents_row {
+  background-image: url('login-back1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+  display: flex;
+  visibility: visible;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  background-color: white;
+  height: 500px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.login-form-contents {
+  height: 500px;
+  margin: 20px 20px 0 20px;
+}
+
+.login-actions {
+  margin: 0 auto;
+}
+
+.submit-login-btn {
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 18pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 12px;
+  background: #000066;
+  color: #ffffff;
+  line-height: 1em;
+  transition: .3s;
+  box-shadow: 6px 6px 3px #666666;
+  border: 2px solid #000066;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.submit-login-btn:hover {
+  box-shadow: none;
+  color: #000066;
+  background: #ffffff;
+}
