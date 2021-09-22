@@ -1,27 +1,44 @@
-<h1>検索結果</h1>
-<% if @users.length !=0 %>
-  <% @users.each do |user| %>
-  <li class='list'>
-    <%= link_to user_path(user.id), method: :get do %>
-      <div class='user-img-content'>
-        <%= image_tag user.image, class: "user-img" %>
-      </div>
-      <div class='user-info'>
-        <h3 class='user-name'>
-          <%= user.nickname %>
-        </h3>
-        <div class='user-platform'>
-          <%= user.platform.name %>
-        </div>
-        <div class='user-favorite'>
-          <%= user.favorite.name %>
-        </div>
-      </div>
+<div class="search-wrapper">
+  <div class="search-top">
+    <div class="search-title">
+      <div class="search-result">検索結果</div>
+    </div>
+    <div class="page-back">
+      <%= link_to "一覧ページへ戻る", users_path, class: "user-index-btn" %>
+    </div>
+  </div>
+  <div class="search-users">
+    <% if @users.length !=0 %>
+      <% @users.each do |user| %>
+      <li class='list'>
+        <%= link_to user_path(user.id), method: :get, class: "user-list" do %>
+          <div class='user-img-content'>
+            <%= image_tag user.image, class: "user-img" %>
+          </div>
+          <div class='user-info'>
+            <div class='user-name'>
+              <%= user.nickname %>
+            </div>
+            <div class='user-platform'>
+               <%= user.platform.name %>
+            </div>
+            <div class='user-favorite'>
+              <%= user.favorite.name %>
+            </div>
+          </div>
+        <% end %>
+      </li>
+      <% end %>
+    <% else %>
+      <h1>
+        該当するユーザーはいません
+      </h1>
     <% end %>
-  </li>
-  <% end %>
-<% else %>
-  該当するユーザーはいません
-<% end %>
+  </div>
 <br>
-<%= link_to "ユーザー一覧ページへ戻る", users_path, class: "user-index-btn" %>
+</div>
+<span id="back">
+    <a href="">
+      <%= image_tag 'top_btn.png', data: {"turbolinks"=>false}, class: "arrow" %>
+    </a>
+</span>
