@@ -1,19 +1,22 @@
-<div class="contents_row">
-  <div class="container">
-    <h2>プロフィール編集</h2>
+<div class="edit-contents_row">
+  <div class="edit-container">
+    <div class="edit-titles">
+    <div class="edit-title">プロフィール編集</div>
+    </div>
     <%= form_with(model: @user, local: true) do |f| %>
 
     <%= render 'devise/shared/error_messages', model: f.object %>
-
+  
+  <div class="edit-form-contents">
       <div class="img-upload">
       <div class="weight-bold-text">
         ユーザー画像
         <span class="indispensable">必須</span>
       </div>
       <div class="click-upload">
-        <p>
+        <span class="form-info">
           クリックしてファイルをアップロード
-        </p>
+        </span>
         <%= f.file_field :image, id:"item-image" %>
       </div>
     </div>
@@ -79,8 +82,9 @@
     </div>
 
       <div class="al-c">
-      <%= f.submit 'プロフィール編集を完了する', class: 'btn btn-primary' %>
+      <%= f.submit 'プロフィール編集を完了する', class: 'chat-btn' %>
       </div>
     <% end %>
+  </div>
   </div>
 </div> 
