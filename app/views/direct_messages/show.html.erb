@@ -1,22 +1,28 @@
-<div class="container">
-    <div class="row">
-        <div class="col-xs-6">
-            <h2 id="room" data-room="<%= @room.id %>" data-user="<%= current_user.id %>"><%= @user.nickname %> さんとのチャット</h2>
-            <%= link_to "戻る", user_path(@user.id) %>
-
-            <%= form_with model: @direct_message, id: :message do |f| %>
-                <%= f.text_field :content %>
-                <%= f.submit '送信', class: 'form-submit' %>
-                <%= f.hidden_field :room_id %>
-              <% end %>
-
-            <div class="messages">
-                <div id='messages'>
-                  <% @direct_messages.each do |dm| %>
-                      <p><%= dm.user.nickname %> : <%= dm.content %></p>
-                  <% end %>
-                </div>
-            </div>
+<div class="chat-container">
+  <div class="chat-row">
+      <div class="col-xs-6">
+        <div class="chat-header">
+          <div id="room" class="room-name" data-room="<%= @room.id %>" data-user="<%= current_user.id %>"><%= @user.nickname %> さんとのチャット</div>
+          <div class="back-chat">
+            <%= link_to "戻る", user_path(@user.id), class: "back-chat-btn" %>
+          </div>
         </div>
-    </div>
+        
+        <div class="chat-content">
+            <%= form_with model: @direct_message, id: :message, class: "chat-actions" do |f| %>
+              <%= f.text_field :content, class: "content-text" %>
+              <%= f.submit '送信', class: 'form-submit' %>
+              <%= f.hidden_field :room_id %>
+            <% end %>
+
+          <div class="messages">
+            <div id='messages'>
+              <% @direct_messages.each do |dm| %>
+                <p><%= dm.user.nickname %> : <%= dm.content %></p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
 </div>
