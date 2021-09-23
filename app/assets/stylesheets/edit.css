@@ -1,0 +1,48 @@
+.edit-contents_row{
+  background-image: url('login-back1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1100px;
+  width: 100vw;
+  padding: 20px 0;
+}
+
+.edit-container {
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.edit-titles {
+  width: 80%;
+  height: 13%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightskyblue;
+  margin-bottom: 30px;
+}
+
+.edit-title {
+  width: 100%;
+  font-size: 28px;
+}
+
+.edit-form-contents {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: left;
+}
+
+.form-group-favorite {
+  margin-left: 20px;
+}
+
+.al-c {
+  display: flex;
+  justify-content: center;
+}
