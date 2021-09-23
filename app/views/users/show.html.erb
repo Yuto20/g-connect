@@ -2,66 +2,70 @@
 
 <div class="user-show-main">
   <div class="user-show-inner">
-    <div class="user__wrapper">
-      <h2 class="user-show-heading">
+    <div class="user-show-top">
+      <div class="user-icon">
+        <%= image_tag @user.image, class: "user-show-img" %>
+      </div>
+      <div class="user-show-title">
         <%= "#{@user.nickname}さんの情報"%>
-      </h2>
+      </div>
+      <div class="page-back">
+        <%= link_to "ユーザー一覧ページへ", users_path, class: "user-index-btn" %>
+      </div>
+    </div>
+    <div class="follow-wrapper">
+      <div class="text-small">
+        <%= link_to @user.followings.count, followings_user_path(@user), class: "follow-count" %> フォロー
+        <%= link_to @user.followers.count, followers_user_path(@user), class: "follow-count" %> フォロワー
+      </div>
+      <div class="follow-btn">
+        <% if current_user != @user %>
+        <% if @user.is_followed_by?(current_user) %>
+          <%= link_to user_relationships_path(@user), method: :delete do %>
+            <button class="btn btn-danger">フォロー解除</button>
+          <% end %>
+        <% else %>
+          <%= link_to user_relationships_path(@user), method: :post do %>
+            <button class="btn btn-primary">フォロー</button>
+          <% end %>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
       <table class="table">
         <tbody>
-          <tr>
-            <td class="table__col1"><%= image_tag @user.image, class: "user-img" %></td>
-          </tr>
-          <p class="text-small">
-            <%= link_to @user.followings.count, followings_user_path(@user) %> フォロー
-            <%= link_to @user.followers.count, followers_user_path(@user) %> フォロワー
-          </p>
-          <tr>
-            <td class="table__col1"><%= @user.nickname %></td>
-          </tr>
-          <tr>
+          <tr class="show-user-info">
+            <th class="table__col1">年齢</th>
             <td class="table__col2"><%= @user.age.name %></td>
           </tr>
-          <tr>
+          <tr class="show-user-info">
             <th class="table__col1">性別</th>
             <td class="table__col2"><%= @user.sex.name %></td>
           </tr>
-          <tr>
+          <tr class="show-user-info">
             <th class="table__col1">ボイスチャット</th>
             <td class="table__col2"><%= @user.voice.name %></td>
           </tr>
-          <tr>
+          <tr class="show-user-info">
             <th class="table__col1">使用プラットフォーム</th>
             <td class="table__col2"><%= @user.platform.name %></td>
           </tr>
-          <tr>
+          <tr class="show-user-info">
             <th class="table__col1">よくプレイするゲーム</th>
             <td class="table__col2"><%= @user.favorite.name %></td>
           </tr>
-          <tr>
+          <tr class="show-user-info">
             <th class="table__col1">プロフィール</th>
             <td class="table__col2"><%= @user.profile %></td>
           </tr>
         </tbody>
       </table>
-      <div class="btn">
+      <div class="action-btn">
         <% if user_signed_in? && current_user.id == @user.id %>
-          <%= link_to "ユーザー情報を編集する", edit_user_path(@user.id), class:"user-btn" %>
-
+          <%= link_to "ユーザー情報を編集する", edit_user_path(@user.id), class:"chat-btn" %>
         <% else %>
-          <%= link_to 'チャットする', direct_message_path(@user.id) %>
-          <div>
-          <% if @user.is_followed_by?(current_user) %>
-            <%= link_to user_relationships_path(@user), method: :delete do %>
-              <button class="btn btn-danger">フォロー解除</button>
-            <% end %>
-          <% else %>
-            <%= link_to user_relationships_path(@user), method: :post do %>
-              <button class="btn btn-primary">フォロー</button>
-            <% end %>
-          <% end %>
+          <%= link_to 'チャットする', direct_message_path(@user.id), class: "chat-btn" %>
         <% end %>
-        <%= link_to "ユーザー一覧ページへ", users_path, class: "user-index-btn" %>
       </div>
-    </div>
   </div>
 </div>

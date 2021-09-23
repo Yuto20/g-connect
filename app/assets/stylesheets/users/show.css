@@ -1,3 +1,150 @@
+.user-show-main {
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: white;
+  margin: 50px auto;
+}
+
+.user-show-inner {
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.user-show-top {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user-icon {
+  margin: 20px;
+  padding: 20px;
+}
+
+.user-show-img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.user-show-title {
+  font-size: 24px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.page-back {
+  padding: 20px;
+  margin: 20px;
+}
+
+.follow-wrapper {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0 30px;
+}
+
+.follow-count {
+  color: blue;
+}
+
+.text-small {
+  font-size: 20px;
+}
+
+.follow-btn {
+  margin-right: 11%;
+}
+
 .btn-danger {
   color: red;
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 10pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 12px;
+  background: white;
+  line-height: 1em;
+  transition: .3s;
+  box-shadow: 6px 6px 3px #666666;
+  border: 2px solid #000066;
+}
+
+.btn-danger:hover {
+  box-shadow: none;
+  color: blue;
+  background: #ffffff;
+}
+
+.btn-primary {
+  color: blue;
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 10pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 12px;
+  background: white;
+  line-height: 1em;
+  transition: .3s;
+  box-shadow: 6px 6px 3px #666666;
+  border: 2px solid #000066;
+}
+
+.btn-primary:hover {
+  box-shadow: none;
+  color: red;
+  background: #ffffff;
+}
+
+.table {
+  height: 30%;
+  width: 100%;
+  margin: 20px;
+  padding: 20px;
+}
+
+.show-user-info {
+  border: 1px solid gray;
+  text-align: center;
+}
+
+.table__col1 {
+  padding-left: 20px;
+}
+
+.action-btn {
+  width: 100%;
+  height: 10%;
+  padding-left: 20px;
+}
+
+.chat-btn {
+  margin-top: 40px;
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 10pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 12px;
+  background: #000066;
+  color: #ffffff;
+  line-height: 1em;
+  transition: .3s;
+  box-shadow: 6px 6px 3px #666666;
+  border: 2px solid #000066;
+}
+
+.chat-btn:hover {
+  box-shadow: none;
+  color: #000066;
+  background: #ffffff;
 }
