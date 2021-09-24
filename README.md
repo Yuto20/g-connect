@@ -83,6 +83,8 @@ Sample
 | age_id             | integer |                           |
 | sex_id             | integer |                           |
 | voice_id           | integer | null: false               |
+| platform_id        | integer | null: false               |
+| favorite_id        | integer | null: false               |
 | profile            | text    | null: false               |
 
 #### Association
