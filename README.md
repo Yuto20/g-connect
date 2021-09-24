@@ -1,11 +1,19 @@
 # アプリケーション名
 「G-connect（ジーコネクト）」
 
+<br>
+
 # アプリケーション概要
 ゲーム仲間を探している人同士でマッチングできるアプリケーションです。
+
+<br>
+
 # URL
 
 https://g-connect-36561.herokuapp.com/
+
+<br>
+
 # テスト用アカウント
 Test
 <br>
@@ -19,27 +27,36 @@ Sample
 <br>
 パスワード：sample11
 
+<br>
+
 # 利用方法
 新規登録もしくはログイン後、ユーザー一覧ページにて、気になるユーザーの詳細ページ遷移します。そこでユーザーをフォローしたり、チャットを行うことができます。
+
+<br>
 
 # 目指した課題解決
 現在使用されている掲示板サイトではマッチングだけを目的としているのですが、このアプリケーションはユーザー同士のコミュニケーションもできるので、既存のサイトよりもミスマッチングが減るようにすることを目指しました。
 
+<br>
+
 # 洗い出した要件
-[![Image from Gyazo](https://i.gyazo.com/1818494bdb29d29c4671d1061da4ab96.png)](https://gyazo.com/1818494bdb29d29c4671d1061da4ab96)
+<img width="1307" alt="3ba0418679125648bf3e1f6b1924e530" src="https://user-images.githubusercontent.com/88032726/134610273-d8db09cf-09a0-4825-bc45-af15105e3712.png">
+
+<br>
 
 # 実装した機能についての画像やGIFおよびその説明
 - プラットフォーム、ゲーム名を選択して検索すると、該当のデータを持ったユーザーが一覧表示されます。
-<br>
-[![Image from Gyazo](https://i.gyazo.com/b1593032d3470fc8ca18441cf3584e20.gif)](https://gyazo.com/b1593032d3470fc8ca18441cf3584e20)
+
+![b1593032d3470fc8ca18441cf3584e20](https://user-images.githubusercontent.com/88032726/134609905-14e596f1-bab0-4ea4-baa2-46b9f37a42c2.gif)
 
 - ユーザーをフォローまたはフォロー解除することができます。
-<br>
-[![Image from Gyazo](https://i.gyazo.com/4abf90662923637a26492f79d5e3c594.gif)](https://gyazo.com/4abf90662923637a26492f79d5e3c594)
+
+![4abf90662923637a26492f79d5e3c594](https://user-images.githubusercontent.com/88032726/134610092-c474174a-8493-4cc1-b931-833bb37ea526.gif)
 
 - 他のユーザーと一対一のリアルタイムチャットができます。
+![98664ea8b6ad85403cb309e4d6406e1a](https://user-images.githubusercontent.com/88032726/134610115-baba7d74-1245-4932-897e-b5f7a1cdae96.gif)
+
 <br>
-[![Image from Gyazo](https://i.gyazo.com/98664ea8b6ad85403cb309e4d6406e1a.gif)](https://gyazo.com/98664ea8b6ad85403cb309e4d6406e1a)
 
 # 実装予定の機能
 - 通知機能
