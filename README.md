@@ -14,6 +14,12 @@ https://g-connect-36561.herokuapp.com/
 
 <br>
 
+# user認証
+- ユーザー名：yuto.s
+- パスワード：117819
+
+<br>
+
 # テスト用アカウント
 Test
 <br>
