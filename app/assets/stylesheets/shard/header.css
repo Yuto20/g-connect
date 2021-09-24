@@ -24,28 +24,53 @@
   text-decoration: none;
   color: #333333;
   padding-right: 10px;
+  display: inline-block;
+}
+
+.user-search:hover {
+  background-color: gray;
 }
 
 .logout {
   text-decoration: none;
   color: #333333;
   padding-right: 10px;
+  display: inline-block;
+}
+
+.logout:hover {
+  background-color: gray;
 }
 
 .user-nickname {
   text-decoration: none;
   color: #333333;
   padding-right: 10px;
+  display: inline-block;
+}
+
+.user-nickname:hover {
+  background-color: gray;
 }
 
 .login {
   text-decoration: none;
   color: #333333;
   padding-right: 10px;
+  display: inline-block;
+}
+
+.login:hover {
+  background-color: gray;
 }
 
 .sign-up {
   text-decoration: none;
   color: #333333;
   padding-right: 10px;
+  display: inline-block;
+}
+
+.sign-up:hover {
+  background-color: gray;
 }
