@@ -25,6 +25,12 @@ class DirectMessagesController < ApplicationController
     end
   end
 
+  def destroy
+    @direct_message = DirectMessage.find(params[:id])
+    @direct_message.destroy
+    redirect_to direct_message_path(@user.id)
+  end
+
   private
   def direct_message_params
     params.require(:direct_message).permit(:content, :room_id)
