@@ -19,6 +19,9 @@
             <div id='messages'>
               <% @direct_messages.each do |dm| %>
                 <p><%= dm.user.nickname %> : <%= dm.content %></p>
+                <% if dm.user_id == current_user.id %>
+                  <%= link_to "削除", direct_message_path(dm.id), method: :delete, class:"direct-messages-destroy" %>
+                <% end %>
               <% end %>
             </div>
           </div>

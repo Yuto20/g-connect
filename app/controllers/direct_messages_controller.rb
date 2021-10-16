@@ -27,8 +27,9 @@ class DirectMessagesController < ApplicationController
 
   def destroy
     @direct_message = DirectMessage.find(params[:id])
-    @direct_message.destroy
-    redirect_to direct_message_path(@user.id)
+    if @direct_message.destroy
+      redirect_to root_path
+    end
   end
 
   private
