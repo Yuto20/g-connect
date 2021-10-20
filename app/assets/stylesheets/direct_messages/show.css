@@ -61,3 +61,8 @@
 .messages {
   padding-left: 100px;
 }
+
+.direct-messages-destroy {
+  display: inline-block;
+  margin-bottom: 10px;
+}
